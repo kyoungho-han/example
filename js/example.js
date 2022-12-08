@@ -16,5 +16,5 @@ nameH1Element.onclick = () => {
   } else {
     alert('이름이 입력되지 않았습니다.');
   }
-}
+};
 
