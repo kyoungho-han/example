@@ -15,13 +15,21 @@
     </div>
     <dialog id="inputModal">
         <div class="modalContent">
-            <form>
+            <form class="modalForm">
                 <label>
                     이름:
-                    <input type="text" />
+                    <input name="userName" type="text" />
                 </label>
-                <button>확인</button>
+                <label>
+                    학번:
+                    <input name="studioNo" type="number" />
+                </label>
+                <label>
+                    이메일:
+                    <input name="email" type="email" />
+                </label>
             </form>
+            <button class="modalSubmit">확인</button>
         </div>
     </dialog>
     <script src="js/example.js"></script>

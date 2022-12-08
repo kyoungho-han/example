@@ -24,6 +24,17 @@ nameH1Element.onclick = () => {
   // }
 };
 
+const modalSubmitBtn = document.querySelector('button.modalSubmit');
+
+modalSubmitBtn.onclick = () => {
+  const ModalFormElement = document.querySelector('.modalForm');
+  const formData = new FormData(ModalFormElement);
+
+  for (const [key, value] of formData) {
+    localStorage.setItem(key, value);
+  }
+};
+
 inputModalElement.onclick = (event) => {
   if (event.target.nodeName === 'DIALOG') inputModalElement.close();
 };
