@@ -35,6 +35,12 @@ modalSubmitBtn.onclick = () => {
     if (key === 'userName') {
       setUserName(value);
     }
+    if (key === 'studioNo') {
+      setUserName(value);
+    }
+    if (key === 'email') {
+      setUserName(value);
+    }
   }
   inputModalElement.close();
 };
