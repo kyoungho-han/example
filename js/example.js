@@ -51,9 +51,8 @@ modalSubmitBtn.onclick = () => {
       }
     }
     if (key === 'studentNo') {
-      if (value.length > 9 && value.length < 1) {
-        alert('학번이 9자리 초과되었거나 입력이 되지않았습니다. 다시입력해주세요.');
-      } else setStudentNo(value);
+      if (value.length >= 9) alert('학번이 9자리 초과하면 안됩니다. 다시입력해주세요.');
+      else setStudentNo(value);
     }
     if (key === 'email') {
       if (!(value.endsWith('.com') && value.includes('@'))) {
