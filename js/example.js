@@ -52,8 +52,10 @@ modalSubmitBtn.onclick = () => {
       else setStudentNo(value);
     }
     if (key === 'email') {
-      if (value.startsWith('.com') && value.includes('@')) setEmail(value);
-      else alert('이메일 형식이 올바르지 않습니다');
+      if (!(value.startsWith('.com') && value.includes('@'))) {
+        alert('이메일 형식이 올바르지 않습니다');
+      }
+      else setEmail(value);
     }
   }
   inputModalElement.close();
