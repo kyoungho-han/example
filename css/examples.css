@@ -2,12 +2,25 @@ body {
     background-color: aquamarine;
 }
 
+dialog {
+    padding: 0px;
+    border: 0px;
+}
+
 .inline {
     display: inline-block;
     cursor: pointer;
 }
 .red {
     color: red;
+}
+
+.modalContent {
+    width: 300px;
+    height: 200px;
+
+    border-radius: 25px;
+    background-color: white;
 }
 
 #inputModal::backdrop {
