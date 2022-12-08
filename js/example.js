@@ -1,5 +1,7 @@
 const nameH1Element = document.querySelector('h1.inline');
 const connectNameElement = document.querySelector('span.red');
+const studentNoElement = document.querySelector('span.studentNo');
+const emailElement = document.querySelector('span.email');
 
 const inputModalElement = document.querySelector('#inputModal');
 
@@ -7,9 +9,18 @@ const setUserName = (name) => {
   nameH1Element.textContent = name;
   connectNameElement.textContent = name;
 };
-
+const setStudentNo = (studentno) => {
+  studentNoElement.textContent = studentno;
+};
+const setEmail = (email) => {
+  emailElement.textContent = email;
+};
 const localName = localStorage.getItem('name');
+const localStudentNo = localStorage.getItem('studentno');
+const localEmail = localStorage.getItem('email');
 if (localName) setUserName(localName);
+if (localStudentNo) setStudentNo(localStudentNo);
+if (localEmail) setEmail(localEmail);
 
 console.log(inputModalElement);
 nameH1Element.onclick = () => {
@@ -35,11 +46,11 @@ modalSubmitBtn.onclick = () => {
     if (key === 'userName') {
       setUserName(value);
     }
-    if (key === 'studioNo') {
-      setUserName(value);
+    if (key === 'studentNo') {
+      setStudentNo(value);
     }
     if (key === 'email') {
-      setUserName(value);
+      setEmail(value);
     }
   }
   inputModalElement.close();
