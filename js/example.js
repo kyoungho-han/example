@@ -32,7 +32,11 @@ modalSubmitBtn.onclick = () => {
 
   for (const [key, value] of formData) {
     localStorage.setItem(key, value);
+    if (key === 'userName') {
+      setUserName(value);
+    }
   }
+  inputModalElement.close();
 };
 
 inputModalElement.onclick = (event) => {
