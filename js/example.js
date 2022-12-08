@@ -15,8 +15,8 @@ const setStudentNo = (studentno) => {
 const setEmail = (email) => {
   emailElement.textContent = email;
 };
-const localName = localStorage.getItem('name');
-const localStudentNo = localStorage.getItem('studentno');
+const localName = localStorage.getItem('userName');
+const localStudentNo = localStorage.getItem('studentNo');
 const localEmail = localStorage.getItem('email');
 if (localName) setUserName(localName);
 if (localStudentNo) setStudentNo(localStudentNo);
