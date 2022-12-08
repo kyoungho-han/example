@@ -44,7 +44,8 @@ modalSubmitBtn.onclick = () => {
   for (const [key, value] of formData) {
     localStorage.setItem(key, value);
     if (key === 'userName') {
-      setUserName(value);
+      if (value === '') alert('값을 입력해주세요');
+      else setUserName(value);
     }
     if (key === 'studentNo') {
       setStudentNo(value);
