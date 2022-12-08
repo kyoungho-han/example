@@ -44,14 +44,16 @@ modalSubmitBtn.onclick = () => {
   for (const [key, value] of formData) {
     localStorage.setItem(key, value);
     if (key === 'userName') {
-      if (value === '') alert('값을 입력해주세요');
+      if (value === '') alert('이름을 입력해주세요');
       else setUserName(value);
     }
     if (key === 'studentNo') {
-      setStudentNo(value);
+      if (value.length >= 9) alert('학번이 9자리 초과하면 안됩니다. 다시입력해주세요.');
+      else setStudentNo(value);
     }
     if (key === 'email') {
-      setEmail(value);
+      if (value.startsWith('.com') && value.includes('@')) setEmail(value);
+      else console.log('이메일 형식이 올바르지 않습니다');
     }
   }
   inputModalElement.close();
