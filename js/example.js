@@ -40,6 +40,8 @@ const modalSubmitBtn = document.querySelector('button.modalSubmit');
 modalSubmitBtn.onclick = () => {
   const ModalFormElement = document.querySelector('.modalForm');
   const formData = new FormData(ModalFormElement);
+  const formData2 = new FormData(ModalFormElement);
+  const formData3 = new FormData(ModalFormElement);
 
   for (const [key, value] of formData) {
     localStorage.setItem(key, value);
@@ -48,14 +50,14 @@ modalSubmitBtn.onclick = () => {
       else setUserName(value);
     }
   }
-  for (const [key2, value2] of formData) {
+  for (const [key2, value2] of formData2) {
     localStorage.setItem(key2, value2);
     if (key2 === 'studentNo') {
       if (value2.length >= 9) alert('학번이 9자리 초과하면 안됩니다. 다시입력해주세요.');
       else setStudentNo(value2);
     }
   }
-  for (const [key, value] of formData) {
+  for (const [key, value] of formData3) {
     localStorage.setItem(key, value);
     if (key === 'email') {
       if (!(value.endsWith('.com') && value.includes('@'))) {
