@@ -8,13 +8,13 @@ if (localName) {
 
 nameH1Element.onclick = () => {
   const inputName = prompt('이름을 입력해 주세요.');
-  if(inputName) {
+  if (inputName) {
     localStorage.setItem('name', inputName);
 
     nameH1Element.textContent = inputName;
     connectNameElement.textContent = inputName;
-} else {
-  alert('이름이 입력되지 않았습니다.');
+  } else {
+    alert('이름이 입력되지 않았습니다.');
   }
 }
 
