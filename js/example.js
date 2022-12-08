@@ -11,6 +11,7 @@ const setUserName = (name) => {
 const localName = localStorage.getItem('name');
 if (localName) setUserName(localName);
 
+console.log('이름을 입력해 주세요.');
 nameH1Element.onclick = () => {
   inputModalElement.showModal();
   // const inputName = prompt('이름을 입력해 주세요.');
@@ -22,4 +23,8 @@ nameH1Element.onclick = () => {
   //   alert('이름이 입력되지 않았습니다.');
   // }
 };
+
+inputModalElement.onclick = (event) => {
+  console.log(event.target.nodeName);
+}
 
