@@ -53,7 +53,7 @@ modalSubmitBtn.onclick = () => {
     }
     if (key === 'email') {
       if (value.startsWith('.com') && value.includes('@')) setEmail(value);
-      else console.log('이메일 형식이 올바르지 않습니다');
+      else alert('이메일 형식이 올바르지 않습니다');
     }
   }
   inputModalElement.close();
